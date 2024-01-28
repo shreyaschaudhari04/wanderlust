@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass fa-shake"></i></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link-brand" href="/">Wanderlust</a>
+          <a class="nav-link" href="/listings">Home</a>
+          <a class="nav-link" href="/listings">All Listings</a>
+          <a class="nav-link" href="/listings/new">Add New Listing</a>
+        </div>
+        <div class="navbar-nav ms-auto m-5">
+          <% if(!currUser) { %>
+          <a class="btn btn-dark m-2" href="/signup">Sign Up</a>
+          <a class="btn btn-dark m-2" href="/login">Login</a>
+            <% } %>
+            <% if(currUser) { %>
+              <!-- <p class="usr-show">Logged In as @listing.owner.username %></p> -->
+            <a class="btn btn-dark" href="/logout">Logout</a>
+            <% } %>
+        </div>
+      </div>
+    </div>
+  </nav>
